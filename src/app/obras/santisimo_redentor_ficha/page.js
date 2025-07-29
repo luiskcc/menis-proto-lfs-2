@@ -177,14 +177,14 @@ export default function SantisimoRedentorFicha() {
         {
             id: 16,
             title: "Santisimo Redentor",
-            image: "/santisimo-redentor/section-3/luminus-3.png",
-            section_style: "py-10 pl-20"
+            image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/section-3/luminus-3.png",
+            section_style: "pl-220"
         },
         {
-            id: 17,
+            id: 17, 
             title: "Santisimo Redentor",
             image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/section-3/PAG27A.jpg",
-            section_style: "px-40 py-50",
+            section_style: "py-50",
             layout: "triple",
             pairedImages: [
                 "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/section-3/santisimo_37.jpg",
