@@ -89,6 +89,7 @@ export default function Hero() {
 function getImageSource(index) {
     const images = [
         'magma_main.jpg',
+        'tanque.png',
         'teatro-menis.png',
         'building-gray.png',
         'santacruz-menis.png',
