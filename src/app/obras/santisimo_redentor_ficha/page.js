@@ -1,8 +1,7 @@
 "use client";
-import Navbar from "@/app/components/Navbar";
+import Navbar from "../../components/Navbar";
 import Image from "next/image";
-import Link from "next/link";
-import Footer from "@/app/components/Footer";
+import Footer from "../../components/Footer";
 // Import Swiper components and styles
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';

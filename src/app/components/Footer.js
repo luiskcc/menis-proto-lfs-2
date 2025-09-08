@@ -10,7 +10,7 @@ export default function Footer() {
               {/* Left Column */}
               <div>
                 <h3 className="text-white text-3xl font-medium mb-2">Address</h3>
-                <p className="text-gray-300 text-xl leading-relaxed">Calle Puerta Canseco, 25, 2B, 38001,<br/>Santa Cruz de Tenerife, Islas Canarias</p>
+                <p className="text-gray-300 text-xl leading-relaxed">Calle Puerta Canseco, 25, 2B, 38003,<br/>Santa Cruz de Tenerife, Islas Canarias</p>
   
                 <div className="mt-8">
                   <h3 className="text-white text-3xl font-medium mb-2">Teléfono</h3>
