@@ -2,30 +2,22 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import Hero from '../components/Hero'
 
 export default function Obras() {
   // Sample data array - in a real app, this would likely come from an API or database
   const obras = [
     {
       id: 1,
-      name: "magma_ficha",
-      title: "BIG PARTNER AGUSTIN PEREZ-TORRES GIVES LECTURE ON ACTIVATING ROOFTOPS",
-      description: "BIG Partner Agustin Perez-Torres spoke about CopenHill at the Reusing Rooftops conference in Barcelona, focusing on how the building not only contributes to the waste management and energy production of Copenhagen, but also offers a recreational space for residents and visitors on its roof. Co-organized by the Mies van der Rohe Foundation during Barcelona Architecture Weeks, the event was a part of a broader initiative to discuss the utilization of rooftops, including an international idea competition to redefine the urban spaces of Barcelona&apos;s Eixample district.",
-      image: "/magma.png",
-      year: "2010",
-      icon: "/tenerife-icon.png"
-    },
-    {
-      id: 2,
       name: "santisimo_redentor_ficha",
       title: "Iglesia Santísimo Redentor",
       description: "BIG Partner Agustin Perez-Torres spoke about CopenHill at the Reusing Rooftops conference in Barcelona, focusing on how the building not only contributes to the waste management and energy production of Copenhagen, but also offers a recreational space for residents and visitors on its roof. Co-organized by the Mies van der Rohe Foundation during Barcelona Architecture Weeks, the event was a part of a broader initiative to discuss the utilization of rooftops, including an international idea competition to redefine the urban spaces of Barcelona&apos;s Eixample district.",
-      image: "/santisimo-redentor/santisimo-redentor.jpeg",
+      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/section-1/santisimo_2.jpeg",
       year: "2010",
       icon: "/tenerife-icon.png"
   },
   {
-    id: 3,
+    id: 2,
     title: "BIG PARTNER AGUSTIN PEREZ-TORRES GIVES LECTURE ON ACTIVATING ROOFTOPS",
     description: "BIG Partner Agustin Perez-Torres spoke about CopenHill at the Reusing Rooftops conference in Barcelona, focusing on how the building not only contributes to the waste management and energy production of Copenhagen, but also offers a recreational space for residents and visitors on its roof. Co-organized by the Mies van der Rohe Foundation during Barcelona Architecture Weeks, the event was a part of a broader initiative to discuss the utilization of rooftops, including an international idea competition to redefine the urban spaces of Barcelona&apos;s Eixample district.",
     image: "/plan-menis.png",
@@ -43,6 +35,7 @@ export default function Obras() {
   return (
     <div>
       <Navbar />
+      <Hero />
       <div className="bg-white px-4 sm:px-6 lg:px-40 py-12">
         {/* Map through obras array */}
       {obras.map((obra) => (
