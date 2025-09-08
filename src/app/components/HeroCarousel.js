@@ -9,7 +9,7 @@ import Image from 'next/image';
 const slides = [
   {
     id: 1,
-    image: '/magma.png',
+    image:'/magma/hero/RH1539-23.jpg',
     title: 'Slide 1',
   },
   {
