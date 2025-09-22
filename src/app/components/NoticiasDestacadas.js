@@ -31,27 +31,6 @@ export default function NoticiasDestacadas() {
       year: "2024", 
       image: "/magma/section-2/Fernando Alda_032.jpg",
       category: "2024/23"
-    },
-    {
-      id: 4,
-      title: "Centro Cultural con Materiales Locales Canarios",
-      year: "2023",
-      image: "/magma/section-2/Hisao Suzuki_09.jpg", 
-      category: "2022/21"
-    },
-    {
-      id: 5,
-      title: "Residencia de Investigación Arquitectónica",
-      year: "2022",
-      image: "/magma/section-2/Fernando Alda_005.jpg",
-      category: "2022/21"
-    },
-    {
-      id: 6,
-      title: "Pavilión Experimental en Barcelona",
-      year: "2021",
-      image: "/magma/section-2/Hisao Suzuki_11.jpg",
-      category: "2022/21"
     }
   ];
 
