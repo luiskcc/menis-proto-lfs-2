@@ -61,11 +61,9 @@ export default function Footer() {
           {/* Navigation Links */}
           <div className="border-t border-white/10 pt-8 pb-8">
             <nav className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
+              <a href="#" className="hover:text-red-500 transition-colors">Jobs</a>
               <a href="#" className="hover:text-red-500 transition-colors">Transparencia</a>
-              <a href="#" className="hover:text-red-500 transition-colors">Blog</a>
-              <a href="#" className="hover:text-red-500 transition-colors">Formación</a>
               <a href="#" className="hover:text-red-500 transition-colors">Agradecimiento</a>
-              <a href="#" className="hover:text-red-500 transition-colors">Shop</a>
             </nav>
           </div>
   
