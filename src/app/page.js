@@ -1,6 +1,5 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Investigacion from "./components/Investigacion";
 import SobreNosotros from "./components/SobreNosotros";
 import NoticiasDestacadas from "./components/NoticiasDestacadas";
 import HeroCarousel from "./components/HeroCarousel";
@@ -12,7 +11,6 @@ export default function Home () {
       <Navbar />
       <HeroCarousel />
       <ObrasCarousel />
-      <Investigacion />
       <SobreNosotros />
       <NoticiasDestacadas />
       <Footer />
