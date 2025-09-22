@@ -51,7 +51,7 @@ export default function ObrasCarousel() {
         {/* Section Title */}
         <div className="mb-16">
           <h2 className="text-4xl lg:text-6xl font-roboto font-light tracking-wider text-white mb-4">
-            OBRAS
+            PROYECTOS
           </h2>
           <div className="w-24 h-0.5 bg-red-600"></div>
         </div>

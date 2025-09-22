@@ -51,8 +51,6 @@ return (
             <li><a href="/investigacion" className="text-white hover:text-red-600 transition-colors text-2xl">Lab</a></li>
             <li><a href="/sobre_nosotros" className="text-white hover:text-red-600 transition-colors text-2xl">Nosotros</a></li>
             <li><a href="/contacto" className="text-white hover:text-red-600 transition-colors text-2xl">Noticias</a></li>
-            <li><a href="/contacto" className="text-white hover:text-red-600 transition-colors text-2xl">Blog</a></li>
-            <li><a href="/contacto" className="text-white hover:text-red-600 transition-colors text-2xl">Contacto</a></li>
           </ul>
         </nav>
         </div>
