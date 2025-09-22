@@ -251,14 +251,14 @@ export default function SantisimoRedentorFicha() {
                         
                         {/* Carousel section */}
                         <div className="w-full h-screen mb-10" style={{'--swiper-navigation-color': 'black', '--swiper-navigation-size': '20px'}}>
-                            <Swiper 
+                                <Swiper
                                 modules={[Navigation, Pagination]}
                                 spaceBetween={0}
                                 slidesPerView={1}
                                 navigation
                                 pagination={{ clickable: true }}
                                 className="w-full h-full"
-                            >
+                                >
                                 {carousel_sections.slice(0, 11).map((section) => (
                                     <SwiperSlide key={section.id}>
                                         <div className="w-full h-full">
@@ -267,7 +267,7 @@ export default function SantisimoRedentorFicha() {
                                                 alt={section.title} 
                                                 width={2400}  
                                                 height={1600} 
-                                                className="w-full h-full object-cover custom-pagination" 
+                                                className="w-full h-full object-cover" 
                                                 priority={false}
                                             />
                                         </div>
