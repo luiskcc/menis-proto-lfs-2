@@ -41,7 +41,7 @@ export default function Hero() {
     return (
         <div 
             ref={scrollContainerRef}
-            className="h-screen w-full overflow-auto cursor-grab active:cursor-grabbing bg-black scroll-smooth 
+            className="h-screen w-full overflow-auto cursor-pointer bg-black scroll-smooth 
             scrollbar-none"    
             onMouseDown={handleMouseDown}
             onMouseLeave={handleMouseLeave}
@@ -57,7 +57,7 @@ export default function Hero() {
                 {[...Array(50)].map((_, index) => (
                     <div 
                         key={index} 
-                        className="w-[500px] h-[238px] relative"
+                        className="w-[370px] h-[250px] relative"
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
@@ -67,7 +67,7 @@ export default function Hero() {
                             src={`/${getImageSource(index)}`}
                             alt="architectural image"
                             fill
-                            className={`object-cover p-5 transition-all duration-500 ease-in-out
+                            className={`object-cover p-2 transition-all duration-500 ease-in-out
                                 ${hoveredIndex === index 
                                     ? 'z-50 grayscale-0 scale-110 brightness-110' 
                                     : hoveredIndex !== null 
