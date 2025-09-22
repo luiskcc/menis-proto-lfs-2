@@ -47,14 +47,10 @@ return (
         <nav id="primary-navigation"
           className="fixed top-0 right-0 w-1/5 h-full bg-black/95 hidden pt-24 data-[visible=true]:block">
           <ul className="flex flex-col gap-8 text-start ml-10 font-roboto">
-            <li><a href="/obras" className="text-white hover:text-red-600 transition-colors text-2xl">Obras</a></li>
+            <li><a href="/obras" className="text-white hover:text-red-600 transition-colors text-2xl">Proyectos</a></li>
             <li><a href="/investigacion" className="text-white hover:text-red-600 transition-colors text-2xl">Lab</a></li>
-            <li><a href="/sobre_nosotros" className="text-white hover:text-red-600 transition-colors text-2xl">Hatching</a></li>
             <li><a href="/sobre_nosotros" className="text-white hover:text-red-600 transition-colors text-2xl">Nosotros</a></li>
-            <li><a href="/creaciones" className="text-white hover:text-red-600 transition-colors text-2xl">Creaciones</a></li>
-            <li><a href="/agradecimientos" className="text-white hover:text-red-600 transition-colors text-2xl">Agradecimientos</a></li>
             <li><a href="/contacto" className="text-white hover:text-red-600 transition-colors text-2xl">Noticias</a></li>
-            <li><a href="/contacto" className="text-white hover:text-red-600 transition-colors text-2xl">Contacto</a></li>
           </ul>
         </nav>
         </div>
