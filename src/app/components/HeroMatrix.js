@@ -85,8 +85,7 @@ export default function Hero() {
                 {[...Array(62)].map((_, index) => (
                     <div
                         key={index}
-                        className="w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1rem)] lg:w-[370px]
-                        h-[250px] sm:h-[280px] md:h-[250px] relative"
+                        className="w-full sm:w-1/4 md:w-[16.666%] lg:w-[12.5%] aspect-[4/3] relative"
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
