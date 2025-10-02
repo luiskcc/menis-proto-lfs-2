@@ -38,40 +38,69 @@ export default function Hero() {
         scrollContainerRef.current.scrollTop = scrollTop - walkY;
     };
 
+    const handleTouchStart = (e) => {
+        setIsDragging(true);
+        const touch = e.touches[0];
+        setStartX(touch.pageX - scrollContainerRef.current.offsetLeft);
+        setStartY(touch.pageY - scrollContainerRef.current.offsetTop);
+        setScrollLeft(scrollContainerRef.current.scrollLeft);
+        setScrollTop(scrollContainerRef.current.scrollTop);
+    };
+
+    const handleTouchMove = (e) => {
+        if (!isDragging) return;
+        const touch = e.touches[0];
+        const x = touch.pageX - scrollContainerRef.current.offsetLeft;
+        const y = touch.pageY - scrollContainerRef.current.offsetTop;
+        const walkX = (x - startX) * 2;
+        const walkY = (y - startY) * 2;
+        scrollContainerRef.current.scrollLeft = scrollLeft - walkX;
+        scrollContainerRef.current.scrollTop = scrollTop - walkY;
+    };
+
+    const handleTouchEnd = () => {
+        setIsDragging(false);
+    };
+
     return (
-        <div 
+        <div
             ref={scrollContainerRef}
-            className="h-screen w-full overflow-auto cursor-pointer bg-black scroll-smooth 
-            scrollbar-none"    
+            className="h-screen w-full overflow-auto cursor-pointer bg-black scroll-smooth
+            scrollbar-none touch-pan-x touch-pan-y"
             onMouseDown={handleMouseDown}
             onMouseLeave={handleMouseLeave}
             onMouseUp={handleMouseUp}
             onMouseMove={handleMouseMove}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
             style={{
                 scrollBehavior: 'smooth',
                 msOverflowStyle: 'none',
                 scrollbarWidth: 'none',
+                WebkitOverflowScrolling: 'touch',
             }}
         >
-            <div className="flex flex-wrap min-w-[200%] min-h-[200%]">
-                {[...Array(50)].map((_, index) => (
-                    <div 
-                        key={index} 
-                        className="w-[370px] h-[250px] relative"
+            <div className="flex flex-wrap min-w-full sm:min-w-[200%] min-h-full sm:min-h-[200%]">
+                {[...Array(62)].map((_, index) => (
+                    <div
+                        key={index}
+                        className="w-full sm:w-[calc(50%-1rem)] md:w-[calc(33.333%-1rem)] lg:w-[370px]
+                        h-[250px] sm:h-[280px] md:h-[250px] relative"
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
                         <div className="absolute inset-0 bg-black/50 transition-opacity duration-300 z-10
                             opacity-0 hover:opacity-100"></div>
-                        <Image 
-                            src={`/${getImageSource(index)}`}
+                        <Image
+                            src={getImageSource(index)}
                             alt="architectural image"
                             fill
                             className={`object-cover p-2 transition-all duration-500 ease-in-out
-                                ${hoveredIndex === index 
-                                    ? 'z-50 grayscale-0 scale-110 brightness-110' 
-                                    : hoveredIndex !== null 
-                                        ? 'scale-95 opacity-60 grayscale' 
+                                ${hoveredIndex === index
+                                    ? 'z-50 grayscale-0 scale-110 brightness-110'
+                                    : hoveredIndex !== null
+                                        ? 'scale-95 opacity-60 grayscale'
                                         : 'grayscale scale-100'}`}
                             sizes="400px"
                         />
@@ -87,37 +116,14 @@ export default function Hero() {
 
 // Helper function to cycle through your images
 function getImageSource(index) {
+    const baseUrl = 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com';
     const images = [
-        'tanque.png',
-        'materiales.png',
-        'Fernando-Menis-Profile_WEB.jpg',
-        'magma/hero/RH1539-23.jpg',
-        'magma/section-2/Fernando Alda_057.jpg',
-        'magma/section-2/Fernando Alda_032.jpg',
-        'magma/section-2/Fernando Alda_005.jpg',
-        'magma/section-2/Hisao Suzuki_04.jpg',
-        'magma/section-2/Hisao Suzuki_09.jpg',
-        'magma/section-2/Hisao Suzuki_11.jpg',
-        'magma/section-2/Hisao Suzuki_13.jpg',
-        'magma/section-2/RH1539-30.jpg',
-        'magma/section-2/RH1539-32.jpg',
-        'magma/section-2/705-30.jpg',
-        'magma/section-2/Hisao-Suzuki_05.jpeg',
-        'magma/section-2/Hisao-Suzuki_06.jpeg',
-        'magma/section-1/ficha_tecnica.jpg',
-        'magma/section-1/01sfvdfvdfbgre.jpeg',
-        'magma/section-1/02043-09a.jpeg',
-        'magma/section-1/28-031.jpeg',
-        'magma/section-1/28-111.jpeg',
-        'magma/section-1/28-121.jpeg',
-        'magma/section-2/magma_ground.png',
-        'magma/section-2/magma_ground_floor.png',
-        'magma/section-1/magma_planos.png',
-        'magma/section-1/magma_molde.png',
-        'magma/hero/RH1539-23.jpg',
-        'magma/section-2/Fernando Alda_057.jpg',
-        'tanque.png',
-        'materiales.png',
+        // First row - 23 images
+        ...Array.from({ length: 23 }, (_, i) => `${baseUrl}/matriz/first-row/first-row-${String(i + 1).padStart(2, '0')}.png`),
+        // Second row - 19 images
+        ...Array.from({ length: 19 }, (_, i) => `${baseUrl}/matriz/second-row/second-row-${String(i + 1).padStart(2, '0')}.png`),
+        // Third row - 20 images
+        ...Array.from({ length: 20 }, (_, i) => `${baseUrl}/matriz/third-row/third-row-${String(i + 1).padStart(2, '0')}.png`),
     ];
     return images[index % images.length];
 }
