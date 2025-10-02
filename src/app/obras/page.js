@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import Hero from '../components/Hero'
+import Hero from '../components/HeroMatrix'
 
 export default function Obras() {
   // Sample data array - in a real app, this would likely come from an API or database
