@@ -10,28 +10,23 @@ import Image from 'next/image';
 const slides = [
   {
     id: 1,
-    image: '/hero-carousel-landing/DRAGO.tif',
-    title: 'Drago',
-  },
-  {
-    id: 2,
-    image: '/hero-carousel-landing/MAGMA.tif',
+    image: '/magma/hero/RH1539-23.jpg',
     title: 'Magma Arts & Congress',
   },
   {
+    id: 2,
+    image: '/tanque.png',
+    title: 'Project Tanque',
+  },
+  {
     id: 3,
-    image: '/hero-carousel-landing/PRESIDENCIA.tif',
-    title: 'Presidencia',
+    image: '/magma/section-2/Fernando Alda_057.jpg',
+    title: 'Architectural Detail',
   },
   {
     id: 4,
-    image: '/hero-carousel-landing/TANQUE.tif',
-    title: 'Tanque',
-  },
-  {
-    id: 5,
-    image: '/hero-carousel-landing/TORUN 3.tif',
-    title: 'Torun',
+    image: '/magma/section-2/Hisao Suzuki_04.jpg',
+    title: 'Interior Space',  
   },
 ]
 

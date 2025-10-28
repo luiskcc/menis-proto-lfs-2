@@ -1,19 +1,17 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Proyectos from "./components/Proyectos";
-import Proyectos2 from "./components/Proyectos2";
+import SobreNosotros from "./components/SobreNosotros";
 import NoticiasDestacadas from "./components/NoticiasDestacadas";
 import HeroCarousel from "./components/HeroCarousel";
-import HatchingCarousel from "./components/HatchingCarousel";
+import ObrasCarousel from "./components/ObrasCarousel";
 
 export default function Home () {
   return (
     <div className="bg-black text-white">
       <Navbar />
       <HeroCarousel />
-      <HatchingCarousel />
-      <Proyectos />
-      <Proyectos2 />
+      <ObrasCarousel />
+      <SobreNosotros />
       <NoticiasDestacadas />
       <Footer />
     </div>

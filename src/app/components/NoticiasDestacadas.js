@@ -1,5 +1,8 @@
 'use client';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
 import Image from "next/image";
 import { useState } from "react";
 
@@ -35,6 +38,30 @@ export default function NoticiasDestacadas() {
       image: "/magma/section-2/Fernando Alda_032.jpg",
       category: "2024/23"
     },
+    {
+      id: 4,
+      location: "LA LAGUNA, TENERIFE, SPAIN",
+      title: "Centro Cultural con Materiales Locales Canarios",
+      year: "2023",
+      image: "/magma/section-2/RH1539-30.jpg",
+      category: "2022/21"
+    },
+    {
+      id: 5,
+      location: "SANTA CRUZ DE TENERIFE, SPAIN",
+      title: "Residencia de Investigación Arquitectónica",
+      year: "2022",
+      image: "/magma/section-2/RH1539-32.jpg",
+      category: "2022/21"
+    },
+    {
+      id: 6,
+      location: "LAS PALMAS DE GRAN CANARIA, SPAIN",
+      title: "Pavilión Experimental en Barcelona",
+      year: "2021",
+      image: "/magma/section-2/705-30.jpg",
+      category: "2022/21"
+    }
   ];
 
   const filteredArticles = activeFilter === 'Todo' 
@@ -43,7 +70,7 @@ export default function NoticiasDestacadas() {
 
   return (
     <section className="bg-black text-white py-20">
-      <div className="mx-auto px-20">
+      <div className="max-w-7xl mx-auto px-4">
         
         {/* Section Title */}
         <div className="mb-16 flex flex-col items-center">
@@ -53,9 +80,8 @@ export default function NoticiasDestacadas() {
           <h3 className="text-2xl lg:text-4xl font-roboto font-light tracking-wider text-white mb-4">
             DESTACADAS
           </h3>
-          <hr class="h-px w-2/3 bg-white border-0 my-8" />
-          </div>
-
+          <div className="w-24 h-0.5 bg-red-600"></div>
+        </div>
 
         {/* Filter Menu */}
         <div className="flex flex-wrap justify-center gap-6 mb-16 text-gray-400">
@@ -72,38 +98,63 @@ export default function NoticiasDestacadas() {
           ))}
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-3 gap-8">
-          {filteredArticles.map((article) => (
-            <div key={article.id} className="flex flex-col">
+        {/* Carousel */}
+        <div className="relative">
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={40}
+            slidesPerView={1}
+            breakpoints={{
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 60,
+              },
+            }}
+            autoplay={{ delay: 8000, disableOnInteraction: true }}
+            speed={1000}
+            className="w-full"
+          >
+            {filteredArticles.map((article) => (
+              <SwiperSlide key={article.id}>
+                <div className="flex flex-col">
+                  
+                  {/* Location Text Above Image */}
+                  <div className="mb-4">
+                    <p className="text-white text-sm font-roboto tracking-wider uppercase">
+                      {article.location}
+                    </p>
+                  </div>
 
-              {/* Location Text Above Image */}
-              <div className="mb-4">
-                <p className="text-white text-sm font-roboto tracking-wider uppercase">
-                  {article.location}
-                </p>
-              </div>
+                  {/* Main Image - Taller Vertical Rectangle */}
+                  <div className="relative w-full aspect-[2/3] bg-black group cursor-pointer">
+                    <Image
+                      src={article.image}
+                      alt={article.title}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      priority={article.id <= 3}
+                    />
+                  </div>
 
-              {/* Main Image - Square */}
-              <div className="relative w-full aspect-square bg-black group cursor-pointer">
-                <Image
-                  src={article.image}
-                  alt={article.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  sizes="33vw"
-                  priority={article.id <= 3}
-                />
-              </div>
-
-              {/* Title Text Below Image */}
-              <div className="mt-4">
-                <h3 className="text-white text-base md:text-lg font-roboto font-light tracking-wide">
-                  {article.title}
-                </h3>
-              </div>
-            </div>
-          ))}
+                  {/* Title Text Below Image */}
+                  <div className="mt-4">
+                    <h3 className="text-white text-base md:text-lg font-roboto font-light tracking-wide">
+                      {article.title}
+                    </h3>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
 
         {/* More News Link */}
