@@ -3,12 +3,9 @@
 import Image from "next/image";
 import { useState } from "react";
 
-export default function NoticiasDestacadas() {
+export default function Proyectos() {
   const [activeFilter, setActiveFilter] = useState('Todo');
 
-  const filterOptions = [
-    'Todo', '2024/23', '2022/21', '2020/19', '2018/17', '2014/13', '2012/11', '-2010'
-  ];
 
   const newsArticles = [
     {
