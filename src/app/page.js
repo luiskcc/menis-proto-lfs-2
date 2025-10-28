@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Proyectos from "./components/Proyectos";
+import Proyectos2 from "./components/Proyectos2";
 import NoticiasDestacadas from "./components/NoticiasDestacadas";
 import HeroCarousel from "./components/HeroCarousel";
 import HatchingCarousel from "./components/HatchingCarousel";
@@ -12,7 +13,7 @@ export default function Home () {
       <HeroCarousel />
       <HatchingCarousel />
       <Proyectos />
-      <NoticiasDestacadas />
+      <Proyectos2 />
       <NoticiasDestacadas />
       <Footer />
     </div>
