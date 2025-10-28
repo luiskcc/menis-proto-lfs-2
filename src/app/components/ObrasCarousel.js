@@ -15,7 +15,7 @@ const obras = [
   },
   {
     id: 2,
-    location: "SANTA CRUZ DE TENERIFE, SPAIN", 
+    location: "SANTA CRUZ DE TENERIFE, SPAIN",
     title: "Twin Buildings: The Essential Services",
     image: "/magma/section-2/Fernando Alda_057.jpg",
     description: "Modern cylindrical architecture"
