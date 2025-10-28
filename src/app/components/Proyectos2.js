@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-export default function Proyectos() {
+export default function Proyectos2() {
 
   const newsArticles = [
     {
@@ -10,7 +10,7 @@ export default function Proyectos() {
       location: "SANTA CRUZ DE TENERIFE, SPAIN",
       title: "Nuevo Proyecto de Arquitectura Volcánica en Tenerife",
       year: "2024",
-      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/first-row/first-row-05.png",
+      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/first-row/first-row-10.png",
       category: "2024/23"
     },
     {
@@ -18,7 +18,7 @@ export default function Proyectos() {
       location: "LAS PALMAS DE GRAN CANARIA, SPAIN",
       title: "Complejo Deportivo Innovador con Tecnología Sostenible",
       year: "2024",
-      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/second-row/second-row-08.png",
+      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/second-row/second-row-15.png",
       category: "2024/23"
     },
     {
@@ -26,7 +26,7 @@ export default function Proyectos() {
       location: "SANTA CRUZ DE TENERIFE, SPAIN",
       title: "Intervención Urbana en el Puerto de Las Palmas",
       year: "2024",
-      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/third-row/third-row-12.png",
+      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/third-row/third-row-18.png",
       category: "2024/23"
     },
   ];

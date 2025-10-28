@@ -35,30 +35,6 @@ export default function NoticiasDestacadas() {
       image: "/magma/section-2/Fernando Alda_032.jpg",
       category: "2024/23"
     },
-    {
-      id: 4,
-      location: "LA LAGUNA, TENERIFE, SPAIN",
-      title: "Centro Cultural con Materiales Locales Canarios",
-      year: "2023",
-      image: "/magma/section-2/RH1539-30.jpg",
-      category: "2022/21"
-    },
-    {
-      id: 5,
-      location: "SANTA CRUZ DE TENERIFE, SPAIN",
-      title: "Residencia de Investigación Arquitectónica",
-      year: "2022",
-      image: "/magma/section-2/RH1539-32.jpg",
-      category: "2022/21"
-    },
-    {
-      id: 6,
-      location: "LAS PALMAS DE GRAN CANARIA, SPAIN",
-      title: "Pavilión Experimental en Barcelona",
-      year: "2021",
-      image: "/magma/section-2/705-30.jpg",
-      category: "2022/21"
-    }
   ];
 
   const filteredArticles = activeFilter === 'Todo' 
@@ -77,8 +53,9 @@ export default function NoticiasDestacadas() {
           <h3 className="text-2xl lg:text-4xl font-roboto font-light tracking-wider text-white mb-4">
             DESTACADAS
           </h3>
-          <div className="w-24 h-0.5 bg-red-600"></div>
-        </div>
+          <hr class="h-px w-2/3 bg-white border-0 my-8" />
+          </div>
+
 
         {/* Filter Menu */}
         <div className="flex flex-wrap justify-center gap-6 mb-16 text-gray-400">
