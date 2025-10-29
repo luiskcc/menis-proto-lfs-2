@@ -16,7 +16,7 @@ export default function NoticiasDestacadas() {
       location: "SANTA CRUZ DE TENERIFE, SPAIN",
       title: "Nuevo Proyecto de Arquitectura Volcánica en Tenerife",
       year: "2024",
-      image: "/magma/section-2/Fernando Alda_057.jpg",
+      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/section-2/Fernando+Alda_057.jpg",
       category: "2024/23"
     },
     {
@@ -24,7 +24,7 @@ export default function NoticiasDestacadas() {
       location: "LAS PALMAS DE GRAN CANARIA, SPAIN",
       title: "Complejo Deportivo Innovador con Tecnología Sostenible",
       year: "2024",
-      image: "/magma/section-2/Hisao Suzuki_04.jpg",
+      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/section-2/Hisao+Suzuki_04.jpg",
       category: "2024/23"
     },
     {
@@ -32,7 +32,7 @@ export default function NoticiasDestacadas() {
       location: "SANTA CRUZ DE TENERIFE, SPAIN",
       title: "Intervención Urbana en el Puerto de Las Palmas",
       year: "2024",
-      image: "/magma/section-2/Fernando Alda_032.jpg",
+      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/section-2/Fernando+Alda_032.jpg",
       category: "2024/23"
     },
   ];
