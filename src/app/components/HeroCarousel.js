@@ -10,27 +10,27 @@ import Image from 'next/image';
 const slides = [
   {
     id: 1,
-    image: '/magma/hero-carousel-landing/DRAGO.jpg',
+    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/hero-carousel-landing/DRAGO.jpg',
     title: 'Drago',
   },
   {
     id: 2,
-    image: '/magma/hero-carousel-landing/MAGMA.jpg',
+    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/hero-carousel-landing/MAGMA.jpg',
     title: 'Magma Arts & Congress',
   },
   {
     id: 3,
-    image: '/magma/hero-carousel-landing/PRESIDENCIA.jpg',
+    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/hero-carousel-landing/PRESIDENCIA.jpg',
     title: 'Presidencia',
   },
   {
     id: 4,
-    image: '/magma/hero-carousel-landing/TANQUE.jpg',
+    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/hero-carousel-landing/TANQUE.jpg',
     title: 'Tanque',
   },
   {
     id: 5,
-    image: '/magma/hero-carousel-landing/TORUN 3.jpg',
+    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/hero-carousel-landing/TORUN+3.jpg',
     title: 'Torun',
   },
 ]
