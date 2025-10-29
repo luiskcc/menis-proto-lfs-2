@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
-// Simplified channel mixer based on Photoshop settings
+// Desaturated tonal filter preserving some color information
 function applyCustomBwFilter(imgElement) {
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
@@ -11,34 +11,38 @@ function applyCustomBwFilter(imgElement) {
     ctx.drawImage(imgElement, 0, 0);
 
     const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const data = imageData.data;
 
-    // Photoshop-inspired weights (normalized)
-    // Higher values = lighter in grayscale, lower = darker
-    const weights = {
-        r: 0.40,  // Reds: 40
-        g: 0.50,  // Greens: 40-60 average
-        b: 0.20   // Blues: 20
-    };
+    for (let i = 0; i < data.length; i += 4) {
+        const r = data[i];
+        const g = data[i + 1];
+        const b = data[i + 2];
 
-    // Boost for warm tones (yellows/magentas)
-    const warmBoost = 1.15;
+        // Calculate luminance for contrast adjustment
+        const luminance = 0.299 * r + 0.587 * g + 0.114 * b;
 
-    for (let i = 0; i < imageData.data.length; i += 4) {
-        const r = imageData.data[i];
-        const g = imageData.data[i + 1];
-        const b = imageData.data[i + 2];
+        // Desaturation: blend original colors with luminance (80% desaturated, 20% color)
+        const desaturationAmount = 0.80;
+        let newR = r * (1 - desaturationAmount) + luminance * desaturationAmount;
+        let newG = g * (1 - desaturationAmount) + luminance * desaturationAmount;
+        let newB = b * (1 - desaturationAmount) + luminance * desaturationAmount;
 
-        // Detect warm tones (high red+green, or high red+blue for magenta)
-        const isWarm = (r > b && g > b * 0.8) || (r > g && b > g * 0.8);
-        const boost = isWarm ? warmBoost : 1.0;
+        // Adjust individual channels for slightly cooler tone
+        // Reds: 40, Yellows: 60, Greens: 40, Cyans: 60, Blues: 20, Magentas: 80
+        newR *= 0.98;  // Slightly reduce reds
+        newG *= 1.00;  // Keep greens neutral
+        newB *= 1.05;  // Slightly boost blues for subtle cool tone
 
-        // Weighted grayscale conversion
-        let gray = (r * weights.r + g * weights.g + b * weights.b) * boost;
+        // Slight contrast boost
+        const contrast = 1.15;
+        newR = ((newR - 128) * contrast) + 128;
+        newG = ((newG - 128) * contrast) + 128;
+        newB = ((newB - 128) * contrast) + 128;
 
         // Clamp values
-        gray = Math.min(255, Math.max(0, gray));
-
-        imageData.data[i] = imageData.data[i + 1] = imageData.data[i + 2] = gray;
+        data[i] = Math.min(255, Math.max(0, newR));
+        data[i + 1] = Math.min(255, Math.max(0, newG));
+        data[i + 2] = Math.min(255, Math.max(0, newB));
     }
 
     ctx.putImageData(imageData, 0, 0);
@@ -121,7 +125,7 @@ export default function Hero() {
         <div
             ref={scrollContainerRef}
             className="h-screen w-full overflow-auto cursor-pointer bg-black scroll-smooth
-            scrollbar-none touch-pan-x touch-pan-y"
+            scrollbar-none touch-pan-x touch-pan-y px-4"
             onMouseDown={handleMouseDown}
             onMouseLeave={handleMouseLeave}
             onMouseUp={handleMouseUp}
@@ -136,11 +140,11 @@ export default function Hero() {
                 WebkitOverflowScrolling: 'touch',
             }}
         >
-            <div className="flex flex-wrap min-w-full sm:min-w-[200%] min-h-full sm:min-h-[200%]">
+            <div className="flex flex-wrap gap-4 min-w-full sm:min-w-[200%] min-h-full sm:min-h-[200%]">
                 {[...Array(62)].map((_, index) => (
                     <div
                         key={index}
-                        className="w-full sm:w-1/4 md:w-[16.666%] lg:w-[12.5%] aspect-[4/3] relative overflow-hidden"
+                        className="w-full sm:w-1/5 md:w-[14.28%] lg:w-[12%] aspect-[3/2] relative overflow-hidden"
                         onMouseEnter={() => setHoveredIndex(index)}
                         onMouseLeave={() => setHoveredIndex(null)}
                     >
@@ -163,7 +167,7 @@ export default function Hero() {
                                 src={getImageSource(index)}
                                 alt="architectural image"
                                 fill
-                                className="object-cover p-2 transition-all duration-700 ease-out z-50 scale-110 brightness-110"
+                                className="object-cover p-2 transition-all duration-700 ease-out z-50 scale-105 brightness-105"
                                 sizes="400px"
                             />
                         ) : (
@@ -172,12 +176,12 @@ export default function Hero() {
                                     src={filteredImages[index]}
                                     alt="architectural image"
                                     className={`absolute inset-0 w-full h-full object-cover p-2 transition-all duration-700 ease-out
-                                        ${hoveredIndex !== null ? 'scale-95 opacity-60' : 'scale-100'}`}
+                                        ${hoveredIndex !== null ? 'scale-98 opacity-80' : 'scale-100'}`}
                                 />
                             )
                         )}
 
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent
                             transition-opacity duration-700 ease-out z-20 opacity-0 hover:opacity-100">
                         </div>
                     </div>
