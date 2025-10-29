@@ -14,6 +14,12 @@ const nextConfig = {
         port: '',
         pathname: '/hero-carousel-landing/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'demoairbnbbucket.s3.us-east-2.amazonaws.com',
+        port: '',
+        pathname: '/6_MENIS+HATCHING/**',
+      },
     ],
   },
 }
