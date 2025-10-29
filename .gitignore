@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# images - prevent large files from being committed
+public/**/*.jpg
+public/**/*.jpeg
+public/**/*.png
+public/**/*.gif
+public/**/*.webp
+public/**/*.tif
+public/**/*.tiff
+public/**/*.svg
+public/**/*.bmp
