@@ -5,17 +5,17 @@ import Image from 'next/image';
 const hatchingImages = [
   {
     id: 1,
-    image: '/menis-hatching/image.png',
+    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/6_MENIS+HATCHING/01_Sketch.jpg',
     title: 'Sketch 01'
   },
   {
     id: 2,
-    image: '/menis-hatching/imagecopy.png',
+    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/6_MENIS+HATCHING/02_Sketch.jpg',
     title: 'Sketch 02'
   },
   {
     id: 3,
-    image: '/menis-hatching/imagecopy2.png',
+    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/6_MENIS+HATCHING/03_Sketch.jpg',
     title: 'Sketch 03'
   },
 ];
