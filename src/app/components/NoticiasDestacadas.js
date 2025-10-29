@@ -16,7 +16,7 @@ export default function NoticiasDestacadas() {
       location: "SANTA CRUZ DE TENERIFE, SPAIN",
       title: "Nuevo Proyecto de Arquitectura Volcánica en Tenerife",
       year: "2024",
-      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/section-2/Fernando+Alda_057.jpg",
+      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/first-row/first-row-05.png",
       category: "2024/23"
     },
     {
@@ -24,7 +24,7 @@ export default function NoticiasDestacadas() {
       location: "LAS PALMAS DE GRAN CANARIA, SPAIN",
       title: "Complejo Deportivo Innovador con Tecnología Sostenible",
       year: "2024",
-      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/section-2/Hisao+Suzuki_04.jpg",
+      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/second-row/second-row-08.png",
       category: "2024/23"
     },
     {
@@ -32,7 +32,7 @@ export default function NoticiasDestacadas() {
       location: "SANTA CRUZ DE TENERIFE, SPAIN",
       title: "Intervención Urbana en el Puerto de Las Palmas",
       year: "2024",
-      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/section-2/Fernando+Alda_032.jpg",
+      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/third-row/third-row-12.png",
       category: "2024/23"
     },
   ];
@@ -125,11 +125,6 @@ export default function NoticiasDestacadas() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </div>
-            <div className="text-right">
-              <h3 className="text-2xl lg:text-4xl font-roboto font-light tracking-wider text-white group-hover:text-red-600 transition-colors duration-300">
-                + NOTICIAS
-              </h3>
             </div>
           </div>
         </div>
