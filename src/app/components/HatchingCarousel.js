@@ -10,23 +10,23 @@ const hatchingImages = [
   },
   {
     id: 2,
-    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/6_MENIS+HATCHING/02_Sketch.jpg',
-    title: 'Sketch 02'
-  },
-  {
-    id: 3,
     image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/6_MENIS+HATCHING/03_Sketch.jpg',
     title: 'Sketch 03'
   },
-];
+  {
+    id: 3,
+    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/6_MENIS+HATCHING/02_Sketch.jpg',
+    title: 'Sketch 02'
+  },
+  ];
 
 export default function HatchingCarousel() {
   return (
     <section className="bg-black text-white py-20">
-      <div className="mx-auto px-20">
+      <div className="mx-auto px-12">
 
         {/* Section Title */}
-        <div className="mb-8 px-4">
+        <div className="mb-8 ">
           <h2 className="text-xl lg:text-2xl font-roboto font-light tracking-wider text-white mb-2">
             MENIS HATCHING
           </h2>
@@ -36,7 +36,7 @@ export default function HatchingCarousel() {
         {/* Grid */}
         <div className="grid grid-cols-3 gap-8">
           {hatchingImages.map((item) => (
-            <div key={item.id} className="relative w-full aspect-square bg-black group cursor-pointer">
+            <div key={item.id} className="relative w-full aspect-[44/35] bg-black group cursor-pointer">
               <Image
                 src={item.image}
                 alt={item.title}
