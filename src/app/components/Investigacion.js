@@ -38,7 +38,7 @@ export default function Investigacion() {
           
           {/* Left Side - Diagram/Plans */}
           <div className="relative">
-            <div className="relative w-full aspect-square max-w-lg mx-auto lg:mx-0">
+            <div className="relative w-full aspect-[44/35] max-w-lg mx-auto lg:mx-0">
               <Image
                 src="/materiales.png"
                 alt="Materiales - Investigación estructural"

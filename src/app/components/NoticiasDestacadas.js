@@ -43,7 +43,7 @@ export default function NoticiasDestacadas() {
 
   return (
     <section className="bg-black text-white py-20">
-      <div className="mx-auto px-20">
+      <div className="mx-auto px-12">
         
         {/* Section Title */}
         <div className="mb-16 flex flex-col items-center">
@@ -85,7 +85,7 @@ export default function NoticiasDestacadas() {
               </div>
 
               {/* Main Image - Square */}
-              <div className="relative w-full aspect-square bg-black group cursor-pointer">
+              <div className="relative w-full aspect-[44/35] bg-black group cursor-pointer">
                 <Image
                   src={article.image}
                   alt={article.title}

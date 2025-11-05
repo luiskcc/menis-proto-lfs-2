@@ -20,6 +20,12 @@ const nextConfig = {
         port: '',
         pathname: '/6_MENIS+HATCHING/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'demoairbnbbucket.s3.us-east-2.amazonaws.com',
+        port: '',
+        pathname: '/menis-lab/**',
+      },
     ],
   },
 }

@@ -7,48 +7,46 @@ export default function Proyectos() {
   const newsArticles = [
     {
       id: 1,
-      location: "SANTA CRUZ DE TENERIFE, SPAIN",
-      title: "Nuevo Proyecto de Arquitectura Volcánica en Tenerife",
+      title: "Piscina natural El Guincho",
       year: "2024",
-      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/first-row/first-row-05.png",
+      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/third-row/third-row-05.png",
       category: "2024/23"
     },
     {
       id: 2,
-      location: "LAS PALMAS DE GRAN CANARIA, SPAIN",
-      title: "Complejo Deportivo Innovador con Tecnología Sostenible",
+      title: "Jardín del Espacio Cultural El Tanque",
       year: "2024",
-      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/second-row/second-row-08.png",
+      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/first-row/first-row-03.png",
       category: "2024/23"
     },
     {
       id: 3,
-      location: "SANTA CRUZ DE TENERIFE, SPAIN",
-      title: "Intervención Urbana en el Puerto de Las Palmas",
+      title: "Centro de Cultura y Congresos CKK Jordanki",
       year: "2024",
-      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/third-row/third-row-12.png",
+      image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/matriz/second-row/second-row-02.png",
       category: "2024/23"
     },
   ];
 
   return (
     <section className="bg-black text-white py-20">
-      <div className="mx-auto px-20">
+      <div className="mx-auto px-12">
+
+        {/* Section Title */}
+        <div className="mb-8">
+          <h2 className="text-xl lg:text-2xl font-roboto font-light tracking-wider text-white mb-2">
+            PROYECTOS
+          </h2>
+          <div className="w-16 h-0.5 bg-red-600"></div>
+        </div>
 
         {/* Grid */}
         <div className="grid grid-cols-3 gap-8">
           {newsArticles.map((article) => (
             <div key={article.id} className="flex flex-col">
 
-              {/* Location Text Above Image */}
-              <div className="mb-4">
-                <p className="text-white text-sm font-roboto tracking-wider uppercase">
-                  {article.location}
-                </p>
-              </div>
-
               {/* Main Image - Square */}
-              <div className="relative w-full aspect-square bg-black group cursor-pointer">
+              <div className="relative w-full aspect-[44/35] bg-black group cursor-pointer">
                 <Image
                   src={article.image}
                   alt={article.title}

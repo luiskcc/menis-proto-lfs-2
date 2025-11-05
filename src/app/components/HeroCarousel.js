@@ -49,11 +49,11 @@ export default function HeroCarousel() {
         {slides.map((slide) => (
           <SwiperSlide key={slide.id}>
             <div className="relative w-full h-full">
-              <Image 
-                src={slide.image} 
-                alt={slide.title} 
+              <Image
+                src={slide.image}
+                alt={slide.title}
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority={slide.id === 1}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
               />

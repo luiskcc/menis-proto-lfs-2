@@ -46,7 +46,7 @@ const obras = [
 export default function ObrasCarousel() {
   return (
     <section className="bg-black text-white py-20">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="mx-auto px-12">
         
         {/* Section Title */}
         <div className="mb-16">
@@ -92,7 +92,7 @@ export default function ObrasCarousel() {
                   </div>
 
                   {/* Main Image - Taller Vertical Rectangle */}
-                  <div className="relative w-full aspect-[2/3] bg-black group cursor-pointer">
+                  <div className="relative w-full aspect-[44/35] bg-black group cursor-pointer">
                     <Image
                       src={obra.image}
                       alt={obra.title}
