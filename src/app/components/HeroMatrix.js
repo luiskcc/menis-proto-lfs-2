@@ -167,7 +167,7 @@ export default function Hero() {
                                 src={getImageSource(index)}
                                 alt="architectural image"
                                 fill
-                                className="object-cover p-2 transition-all duration-700 ease-out z-50 scale-105 brightness-105"
+                                className="object-cover transition-all duration-700 ease-out z-50 scale-105 brightness-105"
                                 sizes="400px"
                             />
                         ) : (

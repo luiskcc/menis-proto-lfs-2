@@ -57,8 +57,8 @@ export default function Proyectos() {
                 />
               </div>
 
-              {/* Title Text Below Image */}
-              <div className="mt-4">
+              {/* Title Text Below Image - Centered */}
+              <div className="mt-4 text-center">
                 <h3 className="text-white text-base md:text-lg font-roboto font-light tracking-wide">
                   {article.title}
                 </h3>
