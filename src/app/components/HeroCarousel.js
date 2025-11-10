@@ -10,29 +10,34 @@ import Image from 'next/image';
 const slides = [
   {
     id: 1,
-    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/hero-carousel-landing/DRAGO.jpg',
+    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/IMAGEN_PRINCIPAL_REAL/DRAGO+2.jpg',
     title: 'Drago',
   },
   {
     id: 2,
-    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/hero-carousel-landing/MAGMA.jpg',
+    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/IMAGEN_PRINCIPAL_REAL/MAGMA+2.jpg',
     title: 'Magma Arts & Congress',
   },
   {
     id: 3,
-    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/hero-carousel-landing/PRESIDENCIA.jpg',
+    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/IMAGEN_PRINCIPAL_REAL/PRESIDENCIA+3.jpg',
     title: 'Presidencia',
   },
   {
     id: 4,
-    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/hero-carousel-landing/TANQUE.jpg',
+    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/IMAGEN_PRINCIPAL_REAL/TANQUE+2.jpg',
     title: 'Tanque',
   },
   {
     id: 5,
-    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/hero-carousel-landing/TORUN+3.jpg',
+    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/IMAGEN_PRINCIPAL_REAL/TORUM+3.jpg',
     title: 'Torun',
   },
+  {
+    id: 6,
+    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/IMAGEN_PRINCIPAL_REAL/TORUN+4.jpg',
+    title: 'Torun',
+  }
 ]
 
 export default function HeroCarousel() {
@@ -53,9 +58,10 @@ export default function HeroCarousel() {
                 src={slide.image}
                 alt={slide.title}
                 fill
-                className="object-contain"
+                className="object-cover"
                 priority={slide.id === 1}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                sizes="(max-width: 640px) 640px, (max-width: 768px) 768px, (max-width: 1024px) 1024px, (max-width: 1280px) 1280px, (max-width: 1536px) 1536px, 1920px"
+                quality={90}
               />
             </div>
           </SwiperSlide>
