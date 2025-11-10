@@ -26,6 +26,12 @@ const nextConfig = {
         port: '',
         pathname: '/menis-lab/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'demoairbnbbucket.s3.us-east-2.amazonaws.com',
+        port: '',
+        pathname: '/IMAGEN_PRINCIPAL_REAL/**',
+      },
     ],
   },
 }
