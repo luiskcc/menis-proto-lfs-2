@@ -15,7 +15,7 @@ const hatchingImages = [
   },
   {
     id: 3,
-    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/6_MENIS+HATCHING/02_Sketch.jpg',
+    image: 'https://demoairbnbbucket.s3.us-east-2.amazonaws.com/6_MENIS+HATCHING/03_Sketch_hatching.jpg',
     title: 'Sketch 02'
   },
   ];

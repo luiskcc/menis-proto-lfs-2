@@ -7,17 +7,17 @@ export default function Lab() {
   const newsArticles = [
     {
       id: 1,
-      title: "Nuevo Proyecto de Arquitectura Volcánica en Tenerife",
+      title: "Parque Cuchillitos de Tristan",
       image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/menis-lab/cuchillitos.png",
     },
     {
       id: 2,
-      title: "Complejo Deportivo Innovador con Tecnología Sostenible",
+      title: "Jardín del Espacio Cultural El Tanque",
       image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/menis-lab/tanque.jpg",
     },
     {
       id: 3,
-      title: "Intervención Urbana en el Puerto de Las Palmas",
+      title: "Iluminación navideña en la isla de Fuerteventura",
       image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/menis-lab/navidad.jpg",
     },
   ];
@@ -39,12 +39,6 @@ export default function Lab() {
           {newsArticles.map((article) => (
             <div key={article.id} className="flex flex-col">
 
-              {/* Category Text Above Image */}
-              <div className="mb-4">
-                <p className="text-white text-sm font-roboto tracking-wider uppercase">
-                </p>
-              </div>
-
               {/* Main Image - Square */}
               <div className="relative w-full aspect-[44/35] bg-black group cursor-pointer">
                 <Image
@@ -57,8 +51,8 @@ export default function Lab() {
                 />
               </div>
 
-              {/* Title Text Below Image */}
-              <div className="mt-4">
+              {/* Title Text Below Image - Centered */}
+              <div className="mt-4 text-center">
                 <h3 className="text-white text-base md:text-lg font-roboto font-light tracking-wide">
                   {article.title}
                 </h3>
