@@ -140,7 +140,7 @@ export default function Hero() {
                 WebkitOverflowScrolling: 'touch',
             }}
         >
-            <div className="flex flex-wrap gap-4 min-w-full sm:min-w-[200%] min-h-full sm:min-h-[200%]">
+            <div className="flex flex-wrap gap-10 min-w-full sm:min-w-[200%] min-h-full sm:min-h-[200%]">
                 {[...Array(62)].map((_, index) => (
                     <div
                         key={index}
@@ -175,7 +175,7 @@ export default function Hero() {
                                 <img
                                     src={filteredImages[index]}
                                     alt="architectural image"
-                                    className={`absolute inset-0 w-full h-full object-cover p-2 transition-all duration-700 ease-out
+                                    className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out
                                         ${hoveredIndex !== null ? 'scale-98 opacity-80' : 'scale-100'}`}
                                 />
                             )
