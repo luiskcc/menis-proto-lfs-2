@@ -1,6 +1,7 @@
 'use client';
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function NoticiasDestacadas() {
@@ -98,7 +99,7 @@ export default function NoticiasDestacadas() {
 
         {/* More News Link */}
         <div className="flex justify-end mt-12">
-          <a href="/noticias" className="flex items-center space-x-4 group cursor-pointer">
+          <Link href="/noticias" className="flex items-center space-x-4 group cursor-pointer">
             <span className="text-white group-hover:text-red-600 font-roboto tracking-wider transition-colors duration-300">
               VER MÁS NOTICIAS
             </span>
@@ -119,7 +120,7 @@ export default function NoticiasDestacadas() {
                 />
               </svg>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
