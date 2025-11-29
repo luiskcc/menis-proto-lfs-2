@@ -27,11 +27,31 @@ export default function Lab() {
       <div className="mx-auto px-12">
 
         {/* Section Title */}
-        <div className="mb-8">
-          <h2 className="text-xl lg:text-2xl font-roboto font-light tracking-wider text-white mb-2">
-            LAB
-          </h2>
-          <div className="w-16 h-0.5 bg-red-600"></div>
+        <div className="mb-8 flex justify-between items-end">
+          <div>
+            <h2 className="text-xl lg:text-2xl font-roboto font-light tracking-wider text-white mb-2">
+              LAB
+            </h2>
+            <div className="w-16 h-0.5 bg-red-600"></div>
+          </div>
+          <a href="/hatching" className="group flex items-center gap-2 hover:text-red-600 transition-colors duration-300">
+            <span className="text-sm font-roboto tracking-wider">VER TODOS LOS PROYECTOS</span>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              className="transform group-hover:translate-x-1 transition-transform duration-300"
+            >
+              <path
+                d="M7 17L17 7M17 7H7M17 7V17"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </a>
         </div>
 
         {/* Grid */}

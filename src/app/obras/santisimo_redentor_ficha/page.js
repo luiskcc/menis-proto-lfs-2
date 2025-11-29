@@ -286,11 +286,11 @@ export default function SantisimoRedentorFicha() {
                                 <div key={section.id} className={`w-full bg-black py-10 px-10 gap-10 ${section.section_style || ''}`}>
                                     {section.pairedImages.map((img, i) => (
                                         <div key={i} className="w-1/2">
-                                            <Image 
+                                            <Image
                                                 src={img}
-                                                alt={section.title} 
-                                                width={2400}  
-                                                height={1600} 
+                                                alt={section.title}
+                                                width={2400}
+                                                height={1600}
                                                 className={`w-full h-full object-cover`}
                                                 priority={false}
                                             />
@@ -305,11 +305,11 @@ export default function SantisimoRedentorFicha() {
                                 <div key={section.id} className={`flex flex-row w-full bg-black px-10 py-10 gap-10 ${section.section_style || ''}`}>
                                     {section.pairedImages.map((img, i) => (
                                         <div key={i} className="w-1/3">
-                                            <Image 
+                                            <Image
                                                 src={img}
-                                                alt={section.title} 
-                                                width={2400}  
-                                                height={1600} 
+                                                alt={section.title}
+                                                width={2400}
+                                                height={1600}
                                                 priority={false}
                                             />
                                         </div>
@@ -320,13 +320,13 @@ export default function SantisimoRedentorFicha() {
 
                         // Regular full-width images (default case)
                         return (
-                            <div key={section.id} className={`w-full bg-black h-screen pt-10 pb-10`}>
-                                <Image 
-                                    src={section.image} 
-                                    alt={section.title} 
-                                    width={2400}  
-                                    height={1600} 
-                                    className={`w-full h-full object-cover ${section.section_style || ''}`} 
+                            <div key={section.id} className={`w-full bg-black h-screen pt-10 pb-10 ${section.section_style || ''}`}>
+                                <Image
+                                    src={section.image}
+                                    alt={section.title}
+                                    width={2400}
+                                    height={1600}
+                                    className={`w-full h-full object-cover`}
                                     priority={section.id === 1}
                                 />
                             </div>
