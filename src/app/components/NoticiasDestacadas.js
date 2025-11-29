@@ -98,25 +98,28 @@ export default function NoticiasDestacadas() {
 
         {/* More News Link */}
         <div className="flex justify-end mt-12">
-          <div className="flex items-center space-x-4 group cursor-pointer">
+          <a href="/noticias" className="flex items-center space-x-4 group cursor-pointer">
+            <span className="text-white group-hover:text-red-600 font-roboto tracking-wider transition-colors duration-300">
+              VER MÁS NOTICIAS
+            </span>
             <div className="transform group-hover:translate-x-2 transition-transform duration-300">
-              <svg 
-                width="40" 
-                height="40" 
-                viewBox="0 0 24 24" 
-                fill="none" 
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                fill="none"
                 className="text-white group-hover:text-red-600 transition-colors duration-300"
               >
-                <path 
-                  d="M7 17L17 7M17 7H7M17 7V17" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
+                <path
+                  d="M7 17L17 7M17 7H7M17 7V17"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
                   strokeLinejoin="round"
                 />
               </svg>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>
