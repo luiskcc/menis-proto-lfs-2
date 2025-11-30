@@ -50,6 +50,12 @@ const nextConfig = {
         port: '',
         pathname: '/section-3/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'demoairbnbbucket.s3.us-east-2.amazonaws.com',
+        port: '',
+        pathname: '/magma-project/**',
+      },
     ],
     minimumCacheTTL: 60,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
