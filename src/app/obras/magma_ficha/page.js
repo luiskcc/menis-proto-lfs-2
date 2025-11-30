@@ -10,55 +10,44 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
+
 export default function SantisimoRedentorFicha() {
 
     const visual_sections = [
         {
             id: 1,
             title: "Magma",
-            style: "pt-10",
-            image: "/magma/section-1/ficha_tecnica.jpg",
+            image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/magma-project/MAGMA_CONTENIDO/MAGMA_CONTENIDO/plano-magma-1.jpg",
         },
         {
             id: 2,
             title: "Magma",
-            image: "/magma/section-1/01sfvdfvdfbgre.jpeg",
+            style: "py-10",
+            image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/magma-project/MAGMA_CONTENIDO/MAGMA_CONTENIDO/magma-2.jpg",
         },
         {
             id: 3,
             title: "Santisimo Esculturas multiples",
-            image: "/magma/section-1/magma_molde.png",
+            image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/magma-project/MAGMA_CONTENIDO/MAGMA_CONTENIDO/plano-magma-3.jpg",
         },
         {
             id: 4,
             title: "Santisimo Redentor",
-            image: "/magma/section-1/28-121.jpeg",
+            style: "px-20",
+            image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/magma-project/MAGMA_CONTENIDO/MAGMA_CONTENIDO/magma-4.jpg",
         },
         {
             id: 5,
             title: "Santisimo Proyección Solar",
-            style: "py-50",
-            image: "/magma/section-1/28-111.jpeg",
+            style: "px-10",
+            image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/magma-project/MAGMA_CONTENIDO/MAGMA_CONTENIDO/PAG-5.jpg",
         },
         {
             id: 6,
             title: "Santisimo Proyección Solar",
-            style: "py-50",
-            image: "/magma/section-1/magma_planos.png",
+            style: "px-20 py-10",
+            image: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/magma-project/MAGMA_CONTENIDO/MAGMA_CONTENIDO/magma-collage-double-6.jpg",
         },
-        {
-            id: 7,
-            title: "Santisimo Proyección Solar",
-            style: "py-50",
-            image: "/magma/section-1/28-031.jpeg",
-        },
-        {
-            id: 8,
-            title: "Santisimo Proyección Solar",
-            style: "py-50",
-            image: "/magma/section-1/02043-09a.jpeg",
-        },
-        
     ]
 
 
@@ -74,7 +63,7 @@ export default function SantisimoRedentorFicha() {
             id: 2,
             title: "Santisimo Redentor",
             image: "/magma/hero/RH1539-23.jpg",
-            section_style: "px-40 flex flex-row h-screen",
+            section_style: "gap-100 flex flex-row h-screen",
             layout: "double",
             pairedImages: [
                 "/magma/section-2/Fernando Alda_005.jpg",
@@ -165,17 +154,17 @@ export default function SantisimoRedentorFicha() {
                     </div>
 
                     {/* Main content area */}
-                    <div className="md:w-3/4 h-auto">
+                    <div className="md:w-3/4 h-auto bg-black">
                         {/* First three images remain as is */}
                         <div className="flex flex-col">
-                            {visual_sections.slice(0, 8).map((section) => (
+                            {visual_sections.map((section) => (
                                 <div key={section.id} className={`w-full h-screen mb-10 ${section.style || ''}`}>
-                                    <Image 
-                                        src={section.image} 
-                                        alt={section.title} 
-                                        width={2400}  
-                                        height={1600} 
-                                        className="w-full h-full object-cover" 
+                                    <Image
+                                        src={section.image}
+                                        alt={section.title}
+                                        width={2400}
+                                        height={1600}
+                                        className="w-full h-full object-cover"
                                         priority={section.id === 1}
                                     />
                                 </div>
