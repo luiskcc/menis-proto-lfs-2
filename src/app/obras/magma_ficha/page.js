@@ -131,7 +131,7 @@ export default function SantisimoRedentorFicha() {
                     priority 
                 />
             </div>
-            <div className="bg-white text-black font-bold text-justify">
+            <div className="bg-black text-white font-bold text-justify">
                 <div className="flex flex-col md:flex-row">
                     <div className="md:w-1/4 p-10 sticky top-0 h-screen overflow-y-auto no-scrollbar">
                         <div className="flex flex-col md:gap-90">

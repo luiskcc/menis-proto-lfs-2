@@ -172,11 +172,13 @@ export default function Hero() {
                             />
                         ) : (
                             filteredImages[index] && (
-                                <img
+                                <Image
                                     src={filteredImages[index]}
                                     alt="architectural image"
-                                    className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-out
+                                    fill
+                                    className={`object-cover transition-all duration-700 ease-out
                                         ${hoveredIndex !== null ? 'scale-98 opacity-80' : 'scale-100'}`}
+                                    sizes="400px"
                                 />
                             )
                         )}
