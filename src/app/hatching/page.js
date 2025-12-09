@@ -9,32 +9,20 @@ export default function HatchingPage() {
     {
       id: 1,
       title: "HATCHING DIGITAL",
-      mainImage: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/6_MENIS+HATCHING/01_Sketch.jpg",
-      description: [
-        "Exploración digital de técnicas de rayado y sombreado arquitectónico",
-        "Transformación de sketches tradicionales a medios digitales",
-        "Investigación de texturas y profundidad espacial"
-      ]
+      date: "17 OCTOBER 2025",
+      mainImage: "/magma/lab.png",
     },
     {
       id: 2,
       title: "ACOUSTIC FRAMES",
-      mainImage: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/menis-lab/cuchillitos.png",
-      description: [
-        "Marcos acústicos modulares para espacios arquitectónicos",
-        "Integración de diseño sonoro y forma espacial",
-        "Soluciones innovadoras para control acústico"
-      ]
+      date: "15 NOVEMBER 2025",
+      mainImage: "/magma/lab-2.png",
     },
     {
       id: 3,
       title: "CÍRCULO DE BELLAS ARTES",
-      mainImage: "https://demoairbnbbucket.s3.us-east-2.amazonaws.com/menis-lab/tanque.jpg",
-      description: [
-        "Intervención artística en espacio cultural emblemático",
-        "Diálogo entre arquitectura contemporánea y patrimonio",
-        "Experiencia inmersiva de luz y espacio"
-      ]
+      date: "20 DECEMBER 2025",
+      mainImage: "/magma/lab-3.png",
     },
   ];
 
@@ -45,11 +33,11 @@ export default function HatchingPage() {
       <div className="pt-16">
         {/* Section 1 - HATCHING DIGITAL */}
         <section className="mb-8">
-          <div className="grid grid-cols-2 gap-0">
-            {/* Left - Image */}
+          <div className="grid grid-cols-2 gap-0 items-stretch">
+            {/* Left - Image */}  
             <div className="relative w-full aspect-[924/455] mx-12">
               <Image
-                src="https://demoairbnbbucket.s3.us-east-2.amazonaws.com/6_MENIS+HATCHING/01_Sketch.jpg"
+                src="/magma/lab.png"
                 alt="Hatching Digital"
                 fill
                 className="object-cover"
@@ -58,32 +46,27 @@ export default function HatchingPage() {
             </div>
 
             {/* Right - Content */}
-            <div className="bg-black px-12 py-8 flex flex-col ml-12">
-              <h2 className="text-2xl font-roboto tracking-widest text-red-600 mb-6">
+            <div className="bg-black px-12 flex flex-col justify-center items-start ml-12 min-h-full">
+              <h3 className="text-sm font-roboto tracking-wider text-white uppercase mb-4">
+                PROJECT UPDATE
+              </h3>
+              <h2 className="text-4xl font-roboto font-bold tracking-widest text-red-600 mb-2">
                 HATCHING DIGITAL
               </h2>
-              <div className="bg-white text-black p-8 flex-1">
-                <p className="text-sm font-roboto leading-relaxed mb-4">
-                  Exploración digital de técnicas de rayado y sombreado arquitectónico
-                </p>
-                <p className="text-sm font-roboto leading-relaxed mb-4">
-                  Transformación de sketches tradicionales a medios digitales
-                </p>
-                <p className="text-sm font-roboto leading-relaxed">
-                  Investigación de texturas y profundidad espacial
-                </p>
-              </div>
+              <p className="text-sm font-roboto tracking-wider text-gray-400 uppercase">
+                17 OCTOBER 2025
+              </p>
             </div>
           </div>
         </section>
 
         {/* Section 2 - ACOUSTIC FRAMES */}
         <section className="mb-8">
-          <div className="grid grid-cols-2 gap-0">
+          <div className="grid grid-cols-2 gap-0 items-stretch">
             {/* Left - Image */}
             <div className="relative w-full aspect-[924/455] mx-12">
               <Image
-                src="https://demoairbnbbucket.s3.us-east-2.amazonaws.com/menis-lab/cuchillitos.png"
+                src="/magma/lab-2.png"
                 alt="Acoustic Frames"
                 fill
                 className="object-cover"
@@ -91,32 +74,27 @@ export default function HatchingPage() {
             </div>
 
             {/* Right - Content */}
-            <div className="bg-black px-12 py-8 flex flex-col ml-12">
-              <h2 className="text-2xl font-roboto tracking-widest text-red-600 mb-6">
+            <div className="bg-black px-12 flex flex-col justify-center items-start ml-12 min-h-full">
+              <h3 className="text-sm font-roboto tracking-wider text-white uppercase mb-4">
+                PROJECT UPDATE
+              </h3>
+              <h2 className="text-4xl font-roboto font-bold tracking-widest text-red-600 mb-2">
                 ACOUSTIC FRAMES
               </h2>
-              <div className="bg-white text-black p-8 flex-1">
-                <p className="text-sm font-roboto leading-relaxed mb-4">
-                  Marcos acústicos modulares para espacios arquitectónicos
-                </p>
-                <p className="text-sm font-roboto leading-relaxed mb-4">
-                  Integración de diseño sonoro y forma espacial
-                </p>
-                <p className="text-sm font-roboto leading-relaxed">
-                  Soluciones innovadoras para control acústico
-                </p>
-              </div>
+              <p className="text-sm font-roboto tracking-wider text-gray-400 uppercase">
+                15 NOVEMBER 2025
+              </p>
             </div>
           </div>
         </section>
 
         {/* Section 3 - CÍRCULO DE BELLAS ARTES */}
         <section className="mb-8">
-          <div className="grid grid-cols-2 gap-0">
+          <div className="grid grid-cols-2 gap-0 items-stretch">
             {/* Left - Image */}
             <div className="relative w-full aspect-[924/455] mx-12">
               <Image
-                src="https://demoairbnbbucket.s3.us-east-2.amazonaws.com/menis-lab/tanque.jpg"
+                src="/magma/lab-3.png"
                 alt="Círculo de Bellas Artes"
                 fill
                 className="object-cover"
@@ -124,21 +102,16 @@ export default function HatchingPage() {
             </div>
 
             {/* Right - Content */}
-            <div className="bg-black px-12 py-8 flex flex-col ml-12">
-              <h2 className="text-2xl font-roboto tracking-widest text-red-600 mb-6">
+            <div className="bg-black px-12 flex flex-col justify-center items-start ml-12 min-h-full">
+              <h3 className="text-sm font-roboto tracking-wider text-white uppercase mb-4">
+                PROJECT UPDATE
+              </h3>
+              <h2 className="text-4xl font-roboto font-bold tracking-widest text-red-600 mb-2">
                 CÍRCULO DE BELLAS ARTES
               </h2>
-              <div className="bg-white text-black p-8 flex-1">
-                <p className="text-sm font-roboto leading-relaxed mb-4">
-                  Intervención artística en espacio cultural emblemático
-                </p>
-                <p className="text-sm font-roboto leading-relaxed mb-4">
-                  Diálogo entre arquitectura contemporánea y patrimonio
-                </p>
-                <p className="text-sm font-roboto leading-relaxed">
-                  Experiencia inmersiva de luz y espacio
-                </p>
-              </div>
+              <p className="text-sm font-roboto tracking-wider text-gray-400 uppercase">
+                20 DECEMBER 2025
+              </p>
             </div>
           </div>
         </section>

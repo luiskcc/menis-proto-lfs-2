@@ -73,7 +73,7 @@ export default function Lab() {
 
               {/* Title Text Below Image - Centered */}
               <div className="mt-4 text-center">
-                <h3 className="text-white text-base md:text-lg font-roboto font-light tracking-wide">
+                <h3 className="text-red-600 text-base md:text-lg font-roboto font-bold tracking-wide">
                   {article.title}
                 </h3>
               </div>

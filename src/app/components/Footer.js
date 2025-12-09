@@ -61,9 +61,9 @@ export default function Footer() {
           {/* Navigation Links */}
           <div className="border-t border-white/10 pt-8 pb-8">
             <nav className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
-              <a href="#" className="hover:text-red-500 transition-colors">Jobs</a>
-              <a href="#" className="hover:text-red-500 transition-colors">Transparencia</a>
-              <a href="#" className="hover:text-red-500 transition-colors">Agradecimiento</a>
+              <a href="/jobs" className="hover:text-red-500 transition-colors">Jobs</a>
+              <a href="/transparencia" className="hover:text-red-500 transition-colors">Transparencia</a>
+              <a href="/agradecimiento" className="hover:text-red-500 transition-colors">Agradecimiento</a>
             </nav>
           </div>
   
@@ -71,9 +71,9 @@ export default function Footer() {
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
             <p>Fernando Menis SLPU 2024. All Rights Reserved</p>
             <div className="flex gap-6">
-              <a href="#" className="hover:text-red-500 transition-colors">Política de Privacidad</a>
+              <a href="/politica-privacidad" className="hover:text-red-500 transition-colors">Política de Privacidad</a>
               <a href="#" className="hover:text-red-500 transition-colors">Cookies</a>
-              <a href="#" className="hover:text-red-500 transition-colors">Aviso Legal</a>
+              <a href="/avisos-legales" className="hover:text-red-500 transition-colors">Aviso Legal</a>
             </div>
           </div>
         </div>
